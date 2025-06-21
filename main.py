@@ -29,7 +29,7 @@ def get_premium(payload: PremiumRequest):
             "User-Agent": "Mozilla/5.0",
             "Accept-Language": "en-US,en;q=0.9"
         })
-        session.get("https://www.nseindia.com/option-chain", timeout=10)
+        session.get("https://www.nseindia.com/option-chain", timeout=30)
 
         # Step 2: Call Option Chain API
         response = session.get("https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY", headers={
